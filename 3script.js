@@ -11,36 +11,21 @@ var passwordmax = 128;
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");{
-function generatePassword(userChoicepasswordlength, lowercaseletters, uppercaseletters, numeric, sSymbols) {
+function generatePassword() {
 
       var userChoiceuppercaseletters = window.confirm("Do you want upcase characters?:");
       console.log(userChoiceuppercaseletters);
-      if (userChoiceuppercaseletters){
-        uppercaseletters += ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","W","Z",];
-      }
     
       var userChoicelowercaseletters = window.confirm("Do you want lowercase characters?:");
       console.log(userChoicelowercaseletters);
-      if (userChoicelowercaseletters){
-        lowercaseletters += ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","w","z",];
-      }
     
       var userChoicenumeric = window.confirm("Do you want numeric characters?:");
       console.log(userChoicenumeric);
-      if (userChoicenumeric) {
-        numeric = ["0","1","2","3","4","5","6","7","8","9",];
-      }
     
       var userChoicesSymbols = window.confirm("Do you want special characters?:");
       console.log(userChoicesSymbols);
-      if (userChoicesSymbols){
-        sSymbols = [" ", '"', "!", ",", "#", "$", "%", "&", "'", "(", ")","*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", ];
-      }
     
-
-
-
-      var userChoicepasswordlength = window.parseInt(prompt("How many characters do you want your password to be?"));
+      var userChoicepasswordlength = window.prompt("How many characters do you want your password to be?");
       console.log(userChoicepasswordlength);
       // if (passwordmin >= userChoicepasswordlength >= passwordmax){
       if ((passwordmin > userChoicepasswordlength) && (userChoicepasswordlength > passwordmax)){
@@ -50,16 +35,13 @@ function generatePassword(userChoicepasswordlength, lowercaseletters, uppercasel
           window.alert("not acceptable please choose a range between 8 and 128 characters");
         }
 
-      for (let i = 0; i < userChoicepasswordlength; i++) {
-    var randomIndex = Math.floor(Math.random() * uppercaseletters+lowercaseletters+sSymbols+numeric.userChoicepasswordlength);
-    passwordText.value += uppercaseletters+lowercaseletters+sSymbols+numeric.userChoicepasswordlength[randomIndex];
-    }
+        
 
 
-  return passwordText.value;
+
+  // return "Generator works"
   } 
 }
-
 
 // Write password to the #password input
 function writePassword() {
